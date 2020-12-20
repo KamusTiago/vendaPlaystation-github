@@ -36,13 +36,14 @@ public class ItemDePedido {
 		return quantidade * preco;
 	}
 	
-/*	public String toString() {
+	
+	 @Override public String toString() {
 		return produto.getNome()
 				+ ", $"
 				+ String.format("%.2f", preco)
 				+ ", quantidade: "
 				+ quantidade
 				+ " Subtotal: R$ "
-				+ String.format("%2.f", subTotalProduto());
-	}*/
+				+  subTotalProduto();
+	}
 }

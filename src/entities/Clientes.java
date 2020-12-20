@@ -9,7 +9,7 @@ public class Clientes {
 	private String email;
 	private Date nascimento;
 	
-	private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy"); 
+	private static final SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy"); 
 	
 	public Clientes () {		
 	}
@@ -44,10 +44,11 @@ public class Clientes {
 		this.nascimento = nascimento;
 	}
 	
-	/*public String toString () {
+	@Override
+	public String toString () {
 		return nome 
-				+ "( " + sdf.format(nascimento)
-				+ "- " + email;
-	}*/
+				+ " (" + sdf.format(nascimento)
+				+ "- E-mail: " + email + ")";
+	}
 	
 }
