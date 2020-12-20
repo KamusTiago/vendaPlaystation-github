@@ -12,13 +12,16 @@ import entities.Produto;
 import entities.enums.PedidoStatus;
 
 public class LojaPlaystation {
-
+	
+	//foi adicionado uma excessão no parse
 	public static void main(String[] args) throws ParseException {
 		
 		Scanner sc = new Scanner(System.in);
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy"); 
 		
-		System.out.println("----------SONY PLAYSTATION----------");
+		//saida PLAISTASHION MODO BR
+		
+		System.out.println("----------SONY PLAISTASHION----------");
 		System.out.println();
 		
 		System.out.println("Entre com os dados do cliente: ");
@@ -29,12 +32,14 @@ public class LojaPlaystation {
 		System.out.println("Informe a data de nascimento do cliente: ");
 		Date nascimento = sdf.parse(sc.next());
 		
+		//instanciado dados do cliente
 		Clientes cliente = new Clientes(nome, email, nascimento);
 		
 		System.out.println();
 		System.out.println("Informe o Status do pedido:  ");
 		PedidoStatus status = PedidoStatus.valueOf(sc.next());
 		
+		//instanciado dados do pedido
 		Pedido pedido = new Pedido(new Date(), status, cliente);
 		
 		System.out.println("Quantos produtos deseja adicionar? ");
@@ -52,8 +57,10 @@ public class LojaPlaystation {
 			System.out.println("Informe a quantidade: ");
 			int quantidade = sc.nextInt();
 			
+			//instanciado dados do produto
 			Produto p = new Produto(nomeDoProduto, precoDoProduto);
 			
+			//instanciado itens do pedido
 			ItemDePedido ip = new ItemDePedido(quantidade, precoDoProduto, p);
 			
 			pedido.adicionarItens(ip);

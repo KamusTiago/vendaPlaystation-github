@@ -13,12 +13,16 @@ public class Pedido {
 	private PedidoStatus status;
 	
 	private Clientes cliente;
+	
+	//Foi utilizado Classe List instanciando o ItemDePedido para trazer os itens na forma de lista
+	//Classe List foi usada porque é relação Pedido tem VARIOS ItemDePedido
 	private List<ItemDePedido> itens = new ArrayList<ItemDePedido>();
 	private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy"); 
 	
 	public Pedido() {
 	}
-
+	
+	//Não se pode colocar a lista dentro de um construtor, a lista "itens" fica de fora.
 	public Pedido(Date momento, PedidoStatus status, Clientes cliente) {
 		this.momento = momento;
 		this.status = status;
@@ -49,6 +53,8 @@ public class Pedido {
 		this.status = status;
 	}
 	
+	//Get e set list foram tirados porque pode-se se alterar a lista atraves destes metodos
+	//foram criados metodos especificos para aletrações na lista
 	public void adicionarItens(ItemDePedido item) {
 		itens.add(item);
 	}
@@ -65,6 +71,7 @@ public class Pedido {
 		return soma;
 	}
 	
+	//instanciei StringBuilder para facilitar em longos textos com pequenos dados
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		sb.append("----------SONY PLAISTATION----------\n");

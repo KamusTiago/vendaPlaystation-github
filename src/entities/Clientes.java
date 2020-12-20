@@ -9,6 +9,7 @@ public class Clientes {
 	private String email;
 	private Date nascimento;
 	
+	//foi utilizado Classe SimpleDateFormat para a instanciacao da data.
 	private static final SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy"); 
 	
 	public Clientes () {		
@@ -45,6 +46,7 @@ public class Clientes {
 	}
 	
 	@Override
+	
 	public String toString () {
 		return nome 
 				+ " (" + sdf.format(nascimento)

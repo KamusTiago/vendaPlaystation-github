@@ -1,5 +1,7 @@
 package entities;
 
+
+ //Entidade produto criada para registrar nome e preço do produto.
 public class Produto {
 
 	private String nome;
@@ -24,7 +26,7 @@ public class Produto {
 	public Double getPreco() {
 		return preco;
 	}
-
+	//metodo toString criado para facilitar a saida de dados
 	public String toString() {
 		return "O produto: "
 				+ nome

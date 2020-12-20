@@ -1,5 +1,6 @@
 package entities;
 
+//entidade de Itens do pedido com quantidade e preço, sendo composição do produto.
 public class ItemDePedido {
 
 	private Integer quantidade;
@@ -36,7 +37,7 @@ public class ItemDePedido {
 		return quantidade * preco;
 	}
 	
-	
+	//metodo toString criado para facilidar na saida de dados
 	 @Override public String toString() {
 		return produto.getNome()
 				+ ", $"
